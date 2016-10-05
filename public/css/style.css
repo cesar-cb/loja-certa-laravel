@@ -1,0 +1,173 @@
+/* reset */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6 { margin: 0px; }
+
+/* NAVEGAÇÃO */
+
+.navbar {
+    position: relative;
+    height: 90px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+}
+
+.navbar .navbar-nav {
+    display: inline-block !important;
+    float: none !important;
+}
+
+.navbar-default {
+    background-color: #ff9240;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #fff;
+    background-color: transparent;
+    
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+    line-height: 4;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: #fff;
+    font-weight: bold;
+}
+
+.navbar .navbar-collapse {
+    text-align: center !important;
+}
+
+.navbar-brand {
+    width: 180px;
+} 
+.navbar-brand img{
+    width: 100%;
+}
+
+/* conteudo */
+.slogan {
+    margin: 75px auto 30px auto;
+    font-weight: 100;
+    font-size:  50px !important;
+}
+
+.sub-title {
+    color: #ff9240;
+    margin-bottom: 75px;
+}
+
+.btn-default {
+    background-color: #ff9240;
+    color: #fff;
+    border-radius: 5px;
+    width: 190px;
+    height: 35px;
+    line-height: 2.5;
+    display: block;
+    margin: auto;
+    text-decoration: none;
+}
+
+.btn-default:hover {
+    text-decoration: none;
+}
+
+.sub-btn {
+    color: #ff9240;
+    font-size: 12px;
+}
+
+.jumbotron {
+    margin-bottom: 75px;
+}
+
+.title2 {
+    color: #4a4a4a;
+    margin: 75px auto;
+}
+
+.text {
+    color: #4a4a4a;
+    margin: 75px auto; 
+}
+
+.thumb {
+    margin-bottom: 75px;
+}
+.thumb h3 {
+    color: #4a4a4a;
+    margin: 15px auto 0px auto; 
+}
+
+.thumb p {
+    color: #bbb;
+    margin: 0px auto;
+    
+}
+
+.diagrama {
+    margin: auto  auto 75px auto;
+    display: block;
+    width: 100%;
+}
+
+footer {
+    margin-top: 75px;
+    background-color: #ff9240;
+    color: #fff;
+    padding: 45px 0;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer li a {
+    color: #fff;
+}
+
+footer li a:hover {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo-mobile {
+    display: none;
+}
+
+@media (max-width: 767px){
+    .navbar {
+        position: relative;
+        height: auto !important;
+        margin-bottom: 20px;
+        border: 1px solid transparent;
+    }
+    
+    .navbar-brand {
+        height: auto;
+        min-height: 50px;
+    }
+    
+    .logo-mobile {
+         display: block !important;   
+    }
+    
+    .logo-desk {
+        display: none !important;
+    }
+}
