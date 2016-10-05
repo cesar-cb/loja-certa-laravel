@@ -17,10 +17,10 @@ class StoresController extends Controller {
 	      
 	     // dd(Auth::validate());
 	      
-	      if (attempt($request)) {
+	      if (Auth::attempt($request)) {
             return redirect('/home');
         } else {
-          return 'nao ta logado';
+            return 'nao ta logado';
         }
         
     }
