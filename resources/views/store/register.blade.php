@@ -20,7 +20,7 @@
     		<input type="text" name="identification" value="{{ old('identification') }}" class="mask-cnpj" placeholder="CNPJ">
     		<input type="text" name="address_street" value="{{ old('address_street') }}" placeholder="Endereço da Loja">
     		<input type="text" name="address_number" value="{{ old('address_number') }}" placeholder="Número da Loja">
-    		<input type="text" name="address_neighborhood" value="{{ old('address_neighborhood') }}" placeholder="Endereço vizinho">
+    		<input type="text" name="address_neighborhood" value="{{ old('address_neighborhood') }}" placeholder="Bairro">
     		<input type="text" name="address_city" value="{{ old('address_city') }}" placeholder="Cidade">
     		<input type="text" name="address_state" value="{{ old('address_state') }}" placeholder="Estado">
     		<input type="text" name="address_country" value="{{ old('address_country') }}" placeholder="País">
