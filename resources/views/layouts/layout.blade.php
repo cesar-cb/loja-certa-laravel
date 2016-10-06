@@ -42,6 +42,7 @@
       <ul class="nav navbar-nav">
         <li class="logo-desk"><a class="navbar-brand" href="#"><img src="image/logobranco.png" alt="Loja certa"></a></li>
         <li class="active"><a href="/registrar">Cadastre-se <span class="sr-only">(current)</span></a></li>
+        <li><a href="/entrar">Acessar</a></li>
         <li><a href="#">Contato</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->

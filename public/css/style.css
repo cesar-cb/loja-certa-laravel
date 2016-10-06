@@ -154,13 +154,25 @@ footer li a:hover {
     margin-bottom: 30px;
 }
 
+.card {
+    height: 600px;
+}
+
 .card-title {
     padding: 20px 0;
     font-weight: bold;
 }
 
+.card-text {
+    height: 160px;
+}
+
 .card-block {
     padding: 20px;
+}
+
+.product-actions {
+    
 }
 
 @media (max-width: 767px){

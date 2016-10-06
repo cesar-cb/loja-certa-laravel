@@ -41,12 +41,14 @@
                         
                         <b>R$ {{ $product->price }}</b>
                     </p>
-                    <form method="POST" action="{{url('/dashboard/product/destroy') . '/' . $product->id}}" style="display:inline-block;">
-                        <input name="_method" type="hidden" value="DELETE"/>
-                        <input name="_token" type="hidden" value="{{ csrf_token() }}"/>
-                        <input type="submit" class="btn btn-danger" value="Deletar"/>
-                    </form>
-                    <a href="/dashboard/product/edit/{{ $product->id }}" class="btn btn-warning" style="display:inline-block;">Editar</a>
+                    <div class="product-actions">
+                        <form method="POST" action="{{url('/dashboard/product/destroy') . '/' . $product->id}}" style="display:inline-block;">
+                            <input name="_method" type="hidden" value="DELETE"/>
+                            <input name="_token" type="hidden" value="{{ csrf_token() }}"/>
+                            <input type="submit" class="btn btn-danger" value="Deletar"/>
+                        </form>
+                        <a href="/dashboard/product/edit/{{ $product->id }}" class="btn btn-warning" style="display:inline-block;">Editar</a>
+                    </div>
                 </div>
                 <!--/.Card content-->
     

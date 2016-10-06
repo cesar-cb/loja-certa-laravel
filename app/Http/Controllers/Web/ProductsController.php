@@ -12,12 +12,13 @@ use \App\Http\Controllers\Controller;
 
 class ProductsController extends Controller
 {
-    protected $redirectTo = '/home';
 
 
     public function index(Request $request) {
         
-        $products = api('/api/product', 'GET');
+        $products = new Product();
+        
+        $products = $products::where('store', \Auth::user()->id)->get();
         
         
         return view('store.products.index', ['products' => $products]);
