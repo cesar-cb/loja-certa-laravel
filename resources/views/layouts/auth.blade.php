@@ -20,9 +20,6 @@
 
 </head>
 <body>
-  
-<img src="image/logobranco.png"></img>
-
     
 @yield('content')
 

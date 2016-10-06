@@ -23,6 +23,10 @@ class Product extends Model {
         'updated_at',
         'deleted_at'	
 	];
+	
+	protected $attributes = [
+		'status' => 'active'
+	];
 
 	public static $rules = [
 		   "name" => "required",
@@ -31,9 +35,6 @@ class Product extends Model {
 		   "original_price" => "required",
 		   "stock" => "required",
 		   "barcode" => "required",
-		   "created_at" => "required",
-		   "updated_at" => "required",
-		   "status" => "required",
 		   "due_time" => "required"
 	];
 
@@ -45,5 +46,8 @@ class Product extends Model {
 	public function images() {
 		return $this->hasMany('App\Model\Photo');
 	}
+	
+	// Mutators
+
 
 }

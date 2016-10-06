@@ -15,7 +15,7 @@ trait RESTActions {
 	public function get($id)
 	{
 		$m = self::MODEL;
-		$model = $m::find($id);
+		$model = $m::where('id', $id)->first();
 		if(is_null($model)){
 			return $this->respond(Response::HTTP_NOT_FOUND);
 		}

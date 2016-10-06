@@ -16,8 +16,10 @@
     </section>
     
     <section class="row">
-        <div class="jumbotron">
-            <img src="" alt="imagem do caralho" />
+        <div class="jumbotron embed-responsive embed-responsive-16by9">
+            <video controls="controls" class="embed-responsive-item">
+                <source src="video/VideoLojaCerta.mp4" type="video/mp4">
+            </video>
         </div>
     </section>
     

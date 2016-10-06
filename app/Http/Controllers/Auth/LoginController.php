@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -25,7 +26,9 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/dashboard';
+    protected $username = 'identification';
+
 
     /**
      * Create a new controller instance.
@@ -35,5 +38,16 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest', ['except' => 'logout']);
+    }
+    
+    public function doLogin(Request $request) {
+        $request = $request->only('identification', 'password');
+
+	      
+	    if (\Auth::attempt($request)) {
+            return redirect('/dashboard');
+        } else {
+            return back()->with('message', 'CNPJ e/ou senha não conferem');
+        }
     }
 }

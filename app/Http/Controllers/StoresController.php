@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use App\Model\Store;
+use Illuminate\Support\Facades\Auth;
 
 
 
@@ -10,20 +11,6 @@ class StoresController extends Controller {
 	const MODEL = "App\Model\Store";
 
 	use RESTActions;
-	
-	public function login(Request $request){
-	  
-	      $request = $request->only('identification', 'password');
-	      
-	     // dd(Auth::validate());
-	      
-	      if (Auth::attempt($request)) {
-            return redirect('/home');
-        } else {
-            return 'nao ta logado';
-        }
-        
-    }
     
     public function register(Request $request){
   

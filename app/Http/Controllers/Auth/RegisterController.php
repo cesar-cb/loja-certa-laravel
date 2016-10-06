@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\User;
+use App\Model\Store;
 use Validator;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
 class RegisterController extends Controller
@@ -27,7 +28,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/entrar';
 
     /**
      * Create a new controller instance.
@@ -48,9 +49,16 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|min:6|confirmed',
+    		'name' => 'required',
+            'identification' => 'required|unique:stores',
+            'password' => 'required',
+            'address_street' => 'required',
+            'address_number' => 'required',
+            'address_neighborhood' => 'required',
+            'address_city' => 'required',
+            'address_state' => 'required',
+            'address_country' => 'required',
+            'address_zip_code' => 'required'
         ]);
     }
 
@@ -62,10 +70,33 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
+        return Store::create([
+            'name'                  => $data['name'],
+            'identification'        => $data['identification'],
+            'password'              => $data['password'],
+            'address_street'        => $data['address_street'],
+            'address_number'        => $data['address_number'],
+            'address_neighborhood'  => $data['address_neighborhood'],
+            'address_city'          => $data['address_city'],
+            'address_state'         => $data['address_state'],
+            'address_country'       => $data['address_country'],
+            'address_zip_code'      => $data['address_zip_code'],
         ]);
+    }
+    
+    public function doRegister(Request $request){
+  
+        $input = $request->all();
+        $store = new Store;
+        
+        $validator = $this->validate($request, $store::$rules);
+        
+            
+        $store->create($input);
+        
+        return redirect('/entrar');
+     
+        
+      
     }
 }

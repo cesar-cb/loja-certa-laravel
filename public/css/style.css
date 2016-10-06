@@ -150,6 +150,19 @@ footer li a:hover {
     display: none;
 }
 
+.line-up {
+    margin-bottom: 30px;
+}
+
+.card-title {
+    padding: 20px 0;
+    font-weight: bold;
+}
+
+.card-block {
+    padding: 20px;
+}
+
 @media (max-width: 767px){
     .navbar {
         position: relative;
