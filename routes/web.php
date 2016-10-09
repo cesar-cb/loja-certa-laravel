@@ -10,9 +10,7 @@
 | and give it the Closure to call when that URI is requested.
 |
 */
-Route::group(['middleware' => 'web'], function () {
-
-    Route::group(['prefix' => 'api'], function () {
+Route::group(['prefix' => 'api'], function () {
         
         /**
          * Routes for resource store
@@ -89,6 +87,8 @@ Route::group(['middleware' => 'web'], function () {
     
         
     });
+    
+Route::group(['middleware' => 'web'], function () {
     
     Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
         // Dashboard index
